@@ -33,6 +33,8 @@ public class WebTest {
 	public static void tearDown() throws Exception {
 		// driver.close();
 		// driver.quit();
+		
+		//uncomment these if you want to close the browser after tests are done
 	}
 
 
@@ -57,14 +59,14 @@ public class WebTest {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("/html/body/div[2]/section/div[1]/div[8]/div[2]/p/span[1]")));
-		List<WebElement> spans = driver
+		List<WebElement> count = driver
 				.findElements(By.xpath("/html/body/div[2]/section/div[1]/div[8]/div[2]/p/span[1]"));
-		System.out.println(spans.get(0).getText());
-		assertNotNull(spans);
-		assertEquals("55", spans.get(0).getText());
+		System.out.println(count.get(0).getText());
+		assertNotNull(count);
+		assertEquals("55", count.get(0).getText());	//checking if count is 55
 	}
 
-	// If a status of a study is open, you can click on a "Participate" button.
+	// This code looks for the open status and then clicks on "Participate" button.
 	@Test
 	public void clickOnParticipate() throws Exception {
 		driver.get("http://www.checkbox.io/studies.html");
@@ -86,7 +88,7 @@ public class WebTest {
 
 	}
 
-	// Check if the "Software Changes Survey" has a Amazon reward image.
+	//this code checks if the "Software Changes Survey" has a Amazon reward image.
 	@Test
 	public void amazonRewardImageTest() throws Exception {
 		driver.get("http://www.checkbox.io/studies.html");
@@ -96,7 +98,8 @@ public class WebTest {
 				.visibilityOfElementLocated(By.xpath("/html/body/div[2]/section/div[1]/div[12]/div[1]/div[1]/p[1]")));
 
 		List<WebElement> spans = driver.findElements(By.xpath("/html/body/div[2]/section/div[1]/div[12]/div[1]/div[1]/p[1]"));
-		//// *[@id="dynamicStudies"]/div[12]/div[1]/div[1]/p[1]
+		// *[@id="dynamicStudies"]/div[12]/div[1]/div[1]/p[1]
+		//Since image tag is associated with the "Reward:" text, we can search for that"
 		assertNotNull(spans);
 		assertEquals("Reward:", spans.get(0).getText());
 	}
