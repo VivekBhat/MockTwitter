@@ -4,4 +4,4 @@
 
 ## Test Result
 
-![test_result](https://github.com/VivekBhat/Selenium-HW3/blob/master/ReadmeResources/JUnitTestResult.png)
+![test_result](https://github.ncsu.edu/vbhat/HW3/blob/master/Resources/TestResult.png)
