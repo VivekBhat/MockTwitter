@@ -8,7 +8,7 @@
 * GH-PAGE: https://pages.github.ncsu.edu/vbhat/HW3/ 
 
 
-## SELENIUM (60 points)
+## SELENIUM
 
 Help test out a survey hosting site, http://checkbox.io
 
