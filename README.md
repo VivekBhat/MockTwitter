@@ -1,5 +1,8 @@
 # HW3
 
+* Name:  Vivek Bhat
+* Email ID: vbhat@ncsu.edu
+* Unity ID: vbhat
 
 ## Knockout, CSS
 
