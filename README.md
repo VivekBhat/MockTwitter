@@ -3,7 +3,7 @@
 
 ## Knockout, CSS
 
-* Source code for the [gh-page branch]((https://github.ncsu.edu/vbhat/HW3/tree/gh-pages)) is in [index.html](https://github.ncsu.edu/vbhat/HW3/blob/gh-pages/index.html)
+* Source code for the [gh-page branch](https://github.ncsu.edu/vbhat/HW3/tree/gh-pages) is in [index.html](https://github.ncsu.edu/vbhat/HW3/blob/gh-pages/index.html)
 
 * GH-PAGE: https://pages.github.ncsu.edu/vbhat/HW3/ 
 
