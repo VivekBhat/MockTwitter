@@ -2,13 +2,18 @@
 
 * Name:  Vivek Bhat
 * Email ID: vbhat@ncsu.edu
-* Unity ID: vbhat
 
 ## Knockout, CSS
 
 * Source code for the [gh-page branch](https://github.ncsu.edu/vbhat/HW3/tree/gh-pages) is in [index.html](https://github.ncsu.edu/vbhat/HW3/blob/gh-pages/index.html)
 
-* GH-PAGE: https://pages.github.ncsu.edu/vbhat/HW3/ 
+* GH-PAGE: https://pages.github.ncsu.edu/vbhat/HW3/  
+  To open this gh-page you will be needing a NCSU LDAP account
+
+* Screenshot of the website:
+
+  ![test_result](https://github.ncsu.edu/vbhat/HW3/blob/master/Resources/TestResult.png)
+
 
 
 ## SELENIUM
