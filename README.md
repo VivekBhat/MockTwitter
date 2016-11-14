@@ -1,4 +1,3 @@
-# HW3
 
 * Name:  Vivek Bhat
 * Email ID: vbhat@ncsu.edu
@@ -12,9 +11,10 @@
 
 * Screenshot of the website:
 
-  ![test_result](https://github.ncsu.edu/vbhat/HW3/blob/master/Resources/TestResult.png)
+  ![TWITTER](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/Screen%20Shot.png)
 
 
+Other Part of the project also has the Selenium Testing of a website
 
 ## SELENIUM
 
@@ -34,4 +34,4 @@ http://checkbox.io/studies.html
 
 ### Test Results
 
-![test_result](https://github.ncsu.edu/vbhat/HW3/blob/master/Resources/TestResult.png)
+![test_result](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/TestResult.png)
