@@ -11,7 +11,11 @@
 
 * Website Gif:
 
-  ![TWITTER](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/web.gif)
+  ![TWITTER Gif](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/web.gif)
+
+* Screenshot of the website:
+
+  ![Screenshot](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/Screen%20Shot.png)
 
 
 Other Part of the project also has the Selenium Testing of a website
