@@ -17,7 +17,7 @@
 
   ![Screenshot](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/Screen%20Shot.png)
 
-
+<hr>
 Other Part of the project also has the Selenium Testing of a website
 
 ## SELENIUM
