@@ -9,9 +9,9 @@
 * GH-PAGE: https://pages.github.ncsu.edu/vbhat/HW3/  
   To open this gh-page you will be needing a NCSU LDAP account
 
-* Screenshot of the website:
+* Website Gif:
 
-  ![TWITTER](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/Screen%20Shot.png)
+  ![TWITTER](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/web.gif)
 
 
 Other Part of the project also has the Selenium Testing of a website
