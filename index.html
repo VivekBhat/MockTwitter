@@ -1,222 +1,253 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HW3 | Twitter</title>
+    <meta charset="UTF-8">
+    <title>HW3 | Twitter</title>
     <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
-  <link href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
-   
- <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  
-  <link href="style1.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js" type="text/javascript"></script>
+    <link href="style1.css" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js" type="text/javascript"></script>
 
     <style type="text/css">
-      
-      * {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
+
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
 
 
-</style>
+    </style>
 </head>
 <body>
 
 
-<div class="row"> 
-<div class="col-md-3"> 
+<div class="row">
+    <div class="col-md-3">
 <span class="second">
         
 <h1>HW3</h1>
   <h2>Vivek Bhat  vbhat@ncsu.edu   20152554</h2>
-  </span>   
-</div>
+  </span>
+    </div>
 
-<div class="col-md-6">
+    <div class="col-md-6">
     <span class="first"> 
       <a href="https://twitter.com/bhat175" target="_blank"> @bhat175</a>
       <span class="icon-edit new"></span>
     </span>
 
-<!-- List starts -->
-    <ul class="timeline">
+        <!-- List starts -->
+        <ul class="timeline">
 
-<div data-bind="foreach: tweetData">
+            <div data-bind="foreach: tweetData">
 
- 
 
-<!-- Row 1 -->
-<br>
-<div class="row">
-  
-        <div class="avatar">
-            <img width="80px" height="80px" align="left" data-bind="attr:{src: userImage}" />
-          
-        </div>
-        <div class="bubble-container">
-          <div class="bubble">
-          
-           <b  data-bind="text: usertName">
-                        </b>
-                        <small data-bind="text: atAndTime"></small>
-                        <small data-bind="text: time"></small>
-                        
-                        <p  data-bind="text: post">
-                        </p>
-                        <div data-bind="if: tweeted_Image"><img width="100%" height="100%"  data-bind="attr:{src: tweeted_Image}" />
+                <!-- Row 1 -->
+                <br>
+                <div class="row">
+
+                    <div class="avatar">
+                        <img width="80px" height="80px" align="left" data-bind="attr:{src: userImage}"/>
+
+                    </div>
+                    <div class="bubble-container">
+                        <div class="bubble">
+
+                            <b data-bind="text: usertName">
+                            </b>
+                            <small data-bind="text: atAndTime"></small>
+                            <small data-bind="text: time"></small>
+
+                            <p data-bind="text: post">
+                            </p>
+                            <div data-bind="if: tweeted_Image"><img width="100%" height="100%"
+                                                                    data-bind="attr:{src: tweeted_Image}"/>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="icon-mail-reply action" data-toggle="modal" data-target="#myModal"
+                                         data-toggle="tooltip" data-placement="top" title="Reply"></div>
+                                </div>
+
+
+                                <div class="col-md-3">
+                                    <div class="icon-retweet action" data-toggle="modal" data-target="#retweetModal"
+                                         data-toggle="tooltip" data-placement="top" title="Retweet"></div>
+                                    <small data-bind="text: no_of_retweets"></small>
+                                </div>
+
+
+                                <div class="col-md-3">
+                                    <div class="glyphicon glyphicon-heart" data-toggle="tooltip" data-placement="top"
+                                         title="Like"><b data-bind="text: "></b></div>
+                                    <small data-bind="text: number_of_likes"></small>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="dropdown">
+                                        <button class="dropdown-toggle" type="button" data-toggle="dropdown">...
+                                            <span class="caret"></span></button>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li><a href="#">Send via Direct Message</a></li>
+                                            <li><a href="#">Copy Link to tweet</a></li>
+                                            <li><a href="#">Embed Tweet</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">New Moment</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-            <div class="row">
-              <div class="col-md-3">
-              <div class="icon-mail-reply action" data-toggle="modal" data-target="#myModal" data-toggle="tooltip" data-placement="top" title="Reply"></div>
+
+                    </div>
+
+
                 </div>
 
+                <hr>
 
-                <div class="col-md-3">
-              <div class="icon-retweet action" data-toggle="modal" data-target="#retweetModal" data-toggle="tooltip" data-placement="top" title="Retweet"></div>
-              <small data-bind="text: no_of_retweets"></small>
-              </div>
-
-              
-              <div class="col-md-3">
-   <div class="glyphicon glyphicon-heart" data-toggle="tooltip" data-placement="top" title="Like"><b data-bind="text: "></b></div>
-              <small data-bind="text: number_of_likes"></small>
 
             </div>
-            <div class="col-md-3">
-              <div class="dropdown">
-              <button class="dropdown-toggle" type="button" data-toggle="dropdown">...
-              <span class="caret"></span></button>
-                <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">Send via Direct Message</a></li>
-                        <li><a href="#">Copy Link to tweet</a></li>
-                        <li><a href="#">Embed Tweet</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">New Moment</a></li>
-                      </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-          
 
-      </div>
+            <!-- foreach ends -->
+
+        </ul>
+        <!-- List ends -->
 
 
-</div>
-
-<hr>
-
-
-
-
-
-
-</div>
-
-<!-- foreach ends -->
-
-</ul>
-<!-- List ends -->
-
-
-<!-- col-md-6 ends -->
-</div>
-
-<div class="col-md-3"></div>
-<!-- col-md-3 -->
-</div>
- <!-- outer row div ends here -->
-
-
-
-
-  
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content" >
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4></span text-align ="center"> Reply this to your followers?</h4>
-        </div>
-
-        <div class="modal-body">
-          <form role="form">
-            
-            <div class="form-group">
-              <label for="usrname"></label>
-              <input type="text" class="form-control" id="usrname" placeholder="Add a comment">
-            </div>
-              <button type="submit" class="btn btn-block">Tweet
-                <span class="icon-retweet"></span>
-              </button>
-          </form>
-        </div>
-        </div>
-      </div>
+        <!-- col-md-6 ends -->
     </div>
-  </div>
+
+    <div class="col-md-3"></div>
+    <!-- col-md-3 -->
+</div>
+<!-- outer row div ends here -->
+
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4></span text-align ="center"> Reply this to your followers?</h4>
+            </div>
+
+            <div class="modal-body">
+                <form role="form">
+
+                    <div class="form-group">
+                        <label for="usrname"></label>
+                        <input type="text" class="form-control" id="usrname" placeholder="Add a comment">
+                    </div>
+                    <button type="submit" class="btn btn-block">Tweet
+                        <span class="icon-retweet"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 </div>
 
 
-
-  <div class="modal fade" id="retweetModal" role="dialog">
+<div class="modal fade" id="retweetModal" role="dialog">
     <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content" >
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"></button>
-          <h4></span text-align ="center"> Retweet this to your followers?</h4>
 
-        </div>
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4></span text-align ="center"> Retweet this to your followers?</h4>
 
-        <div class="modal-body">
-          <form role="form">
-            
-            <div class="form-group">
-              <label for="usrname"></label>
-              <input type="text" class="form-control" id="usrname" placeholder="Add a comment">
             </div>
-              <button type="submit" class="btn btn-block" >Retweet
-                <span class="icon-retweet"></span>
-              </button>
-          </form>
+
+            <div class="modal-body">
+                <form role="form">
+
+                    <div class="form-group">
+                        <label for="usrname"></label>
+                        <input type="text" class="form-control" id="usrname" placeholder="Add a comment">
+                    </div>
+                    <button type="submit" class="btn btn-block">Retweet
+                        <span class="icon-retweet"></span>
+                    </button>
+                </form>
+            </div>
         </div>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
+</div>
 </div>
 
 
 <script type="text/javascript">
     ko.applyBindings({
         tweetData: [
-            { usertName: 'NetApp',atAndTime:'@NetApp ',time:'· 31m', post: '#SEGAM2016 is less than one week away! Make sure you stop by booth #2145. For more information, visit: http://nt-ap.com/2dVfDrr', userImage: 'https://pbs.twimg.com/profile_images/684494030390951936/vcPfrub9.jpg', tweeted_Image:'https://pbs.twimg.com/media/Cugud4gW8AAJIFI.jpg:large', no_of_retweets:'2', number_of_likes:'5' },
+            {
+                usertName: 'NetApp',
+                atAndTime: '@NetApp ',
+                time: '· 31m',
+                post: '#SEGAM2016 is less than one week away! Make sure you stop by booth #2145. For more information, visit: http://nt-ap.com/2dVfDrr',
+                userImage: 'https://pbs.twimg.com/profile_images/684494030390951936/vcPfrub9.jpg',
+                tweeted_Image: 'https://pbs.twimg.com/media/Cugud4gW8AAJIFI.jpg:large',
+                no_of_retweets: '2',
+                number_of_likes: '5'
+            },
 
-            { usertName: 'DevOps Summit',atAndTime:'@DevOpsSummit',time:'· 4h', post: '#Join @HrScheele Nov 1-3 in Silicon Valley ▸ http://bit.ly/2amHFsi  @Loodse #IoT #M2M #API #DevOps #APM #Monitoring #DigitalTransformation', userImage: 'https://pbs.twimg.com/profile_images/769329109629558784/a4axZDO-.jpg', tweeted_Image: null, no_of_retweets:'22', number_of_likes:'59' },
-            
-            { usertName: 'Yarn',atAndTime:'@yarnpkg',time:'· 6h', post: 'Secure: Yarn uses checksums to verify the integrity of every installed package before its code is executed.', userImage: 'https://pbs.twimg.com/profile_images/778422085639032832/44mC-kJ3.jpg', tweeted_Image: null, no_of_retweets:'33', number_of_likes:'56' }
+            {
+                usertName: 'DevOps Summit',
+                atAndTime: '@DevOpsSummit',
+                time: '· 4h',
+                post: '#Join @HrScheele Nov 1-3 in Silicon Valley ▸ http://bit.ly/2amHFsi  @Loodse #IoT #M2M #API #DevOps #APM #Monitoring #DigitalTransformation',
+                userImage: 'https://pbs.twimg.com/profile_images/769329109629558784/a4axZDO-.jpg',
+                tweeted_Image: null,
+                no_of_retweets: '22',
+                number_of_likes: '59'
+            },
+
+            {
+                usertName: 'Yarn',
+                atAndTime: '@yarnpkg',
+                time: '· 6h',
+                post: 'Secure: Yarn uses checksums to verify the integrity of every installed package before its code is executed.',
+                userImage: 'https://pbs.twimg.com/profile_images/778422085639032832/44mC-kJ3.jpg',
+                tweeted_Image: null,
+                no_of_retweets: '33',
+                number_of_likes: '56'
+            }
             ,
-            
-            { usertName: 'TechCrunch',atAndTime:'@TechCrunch', time: '· 8h', post: 'Only two days left to submit your Startup Battlefield application! http://tcrn.ch/2e365qX  #TCDisrupt', userImage: 'https://pbs.twimg.com/profile_images/615392662233808896/EtxjSSKk.jpg', tweeted_Image: 'https://pbs.twimg.com/media/CuhBdohW8AAr8_r.jpg', no_of_retweets:'174', number_of_likes:'89' }
-            
-             ]
+
+            {
+                usertName: 'TechCrunch',
+                atAndTime: '@TechCrunch',
+                time: '· 8h',
+                post: 'Only two days left to submit your Startup Battlefield application! http://tcrn.ch/2e365qX  #TCDisrupt',
+                userImage: 'https://pbs.twimg.com/profile_images/615392662233808896/EtxjSSKk.jpg',
+                tweeted_Image: 'https://pbs.twimg.com/media/CuhBdohW8AAr8_r.jpg',
+                no_of_retweets: '174',
+                number_of_likes: '89'
+            }
+
+        ]
     });
 </script>
 
