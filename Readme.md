@@ -1,7 +1,3 @@
-
-* Name:  Vivek Bhat
-* Email ID: vbhat@ncsu.edu
-
 ## Knockout, CSS
 
 * Source code for the [gh-page branch](https://github.ncsu.edu/vbhat/HW3/tree/gh-pages) is in [index.html](https://github.ncsu.edu/vbhat/HW3/blob/gh-pages/index.html)
@@ -11,11 +7,11 @@
 
 * Website Gif:
 
-  ![TWITTER Gif](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/web.gif)
+  ![TWITTER Gif](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/web.gif?raw=true)
 
 * Screenshot of the website:
 
-  ![Screenshot](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/Screen%20Shot.png)
+  ![Screenshot](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/Screen%20Shot.png?raw=true)
 
 <hr>
 Other Part of the project also has the Selenium Testing of a website
@@ -32,10 +28,10 @@ http://checkbox.io/studies.html
 * If a status of a study is open, you can click on a "Participate" button.
 * Check if the "Software Changes Survey" has a Amazon reward image.
 
-###Code For Selenium: 
+### Code For Selenium: 
 
 * https://github.ncsu.edu/vbhat/HW3/blob/master/Selenium.java
 
 ### Test Results
 
-![test_result](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/TestResult.png)
+![test_result](https://github.com/VivekBhat/MockTwitter/blob/master/Resources/TestResult.png?raw=true)
